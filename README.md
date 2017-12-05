@@ -55,3 +55,7 @@ The program can be runned on SWI Prolog. Can download it from here: [Download SW
 	     is transitive, i.e. when all the required pairs are appended, it prints the transitive closure.
 
 10. printlist(L) - It prints out list L using reccursion.
+
+****Scope****
+
+The program can be implemented to check for equivalence relations and calculate the closures as well.
