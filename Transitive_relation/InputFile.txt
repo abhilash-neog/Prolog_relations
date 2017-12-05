@@ -1,0 +1,83 @@
+1 ?- check_transitive(R).
+Please input the set:
+|: [1,2,3].
+Please input the relation:
+|: [(1,2),(2,1),(3,1)].
+Relation is defined on the set
+It is not transitive.
+processing transitive closure...
+processing transitive closure...
+Transitive closure = [(1,2),(2,1),(3,1),(1,1),(2,2),(3,2),]
+ Done
+R = [ (1, 2), (2, 1), (3, 1)] .
+
+ 2 ?- check_transitive(R).
+Please input the set:
+|: [1,2].
+Please input the relation:
+|: [(0,0)].
+Relation is not defined on the set.
+ Cannot check for transitiveness
+R = [ (0, 0)].
+
+ 3 ?- check_transitive(R).
+Please input the set:
+|: [1,2].
+Please input the relation:
+|: [(1,1),(2,2)].
+Relation is defined on the set
+It is transitive.
+ Transitive closure is the relation itself
+R = [ (1, 1), (2, 2)] 
+
+ 4 ?- check_transitive(R).
+Please input the set:
+|: ['Ram','Arun','Ravi'].
+Please input the relation:
+|: [('Ram','Ravi'),('Ravi','Arun'),('Arun','Ram')].
+Relation is defined on the set
+It is not transitive.
+processing transitive closure...
+processing transitive closure...
+processing transitive closure...
+processing transitive closure...
+processing transitive closure...
+Transitive closure = [(Ram,Ravi),(Ravi,Arun),(Arun,Ram),(Ram,Arun),(Ravi,Ram),(Ram,Ram),(Arun,Ravi),(Ravi,Ravi),(Arun,Arun),]
+ Done
+R = [ ('Ram', 'Ravi'), ('Ravi', 'Arun'), ('Arun', 'Ram')] .
+
+ 5 ?- check_transitive(R).
+Please input the set:
+|: ['Ram','Arun','Ravi'].
+Please input the relation:
+|: [('Ram','Ravi'),('Ravi','Arun'),('Ram','Arun')].
+Relation is defined on the set
+It is transitive.
+ Transitive closure is the relation itself
+R = [ ('Ram', 'Ravi'), ('Ravi', 'Arun'), ('Ram', 'Arun')] .
+
+ 6 ?- check_transitive(R).
+Please input the set:
+|: ['Ram','Arun','Ravi'].
+Please input the relation:
+|: [('Ram','Ravi'),('Ravi','Arun'),('Arun','Ram'),('Laxman','Karan')].
+Relation is not defined on the set.
+ Cannot check for transitiveness
+R = [ ('Ram', 'Ravi'), ('Ravi', 'Arun'), ('Arun', 'Ram'), ('Laxman', 'Karan')].
+
+ 7 ?- transitive_closure([(1,2),(2,1)]).
+processing transitive closure...
+Transitive closure = [(1,2),(2,1),(1,1),(2,2),]
+ Done
+true.
+
+ 8 ?- transitive_closure([(1,2),(2,1),(2,2),(1,1)]).
+
+ Done
+true.
+
+ 9 ?- transitive([(1,2),(2,1)]).
+false.
+
+ 10 ?- transitive([(1,2),(2,1),(2,2),(1,1)]).
+true.
